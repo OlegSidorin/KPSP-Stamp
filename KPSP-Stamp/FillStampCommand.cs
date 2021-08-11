@@ -16,7 +16,9 @@ namespace KPSP_Stamp
         {
             UIDocument uidoc = commandData.Application.ActiveUIDocument;
             Document doc = uidoc.Document;
-            TaskDialog.Show("Warning", "Privet from " + doc.Title);
+            StampForm myForm = new StampForm();
+            myForm.Show();
+            //TaskDialog.Show("Warning", "Privet from " + doc.Title);
             return Result.Succeeded;
         }
     }

@@ -29,8 +29,8 @@ namespace KPSP_Stamp
         /// </summary>
         private void InitializeComponent()
         {
-            this.SaveButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.SaveStampButton = new System.Windows.Forms.Button();
+            this.CancelStampButton = new System.Windows.Forms.Button();
             this.tBox11 = new System.Windows.Forms.TextBox();
             this.tBox12 = new System.Windows.Forms.TextBox();
             this.tBox13 = new System.Windows.Forms.TextBox();
@@ -61,29 +61,29 @@ namespace KPSP_Stamp
             this.tBox46 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // SaveButton
+            // SaveStampButton
             // 
-            this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveButton.BackColor = System.Drawing.Color.YellowGreen;
-            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveButton.Location = new System.Drawing.Point(274, 346);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(300, 45);
-            this.SaveButton.TabIndex = 0;
-            this.SaveButton.Text = "Внести изменения";
-            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveStampButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveStampButton.BackColor = System.Drawing.Color.YellowGreen;
+            this.SaveStampButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveStampButton.Location = new System.Drawing.Point(274, 346);
+            this.SaveStampButton.Name = "SaveStampButton";
+            this.SaveStampButton.Size = new System.Drawing.Size(300, 45);
+            this.SaveStampButton.TabIndex = 0;
+            this.SaveStampButton.Text = "Внести изменения";
+            this.SaveStampButton.UseVisualStyleBackColor = false;
             // 
-            // CancelButton
+            // CancelStampButton
             // 
-            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelButton.BackColor = System.Drawing.Color.LightCoral;
-            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(590, 346);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(300, 45);
-            this.CancelButton.TabIndex = 1;
-            this.CancelButton.Text = "Отменить";
-            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelStampButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelStampButton.BackColor = System.Drawing.Color.LightCoral;
+            this.CancelStampButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CancelStampButton.Location = new System.Drawing.Point(590, 346);
+            this.CancelStampButton.Name = "CancelStampButton";
+            this.CancelStampButton.Size = new System.Drawing.Size(300, 45);
+            this.CancelStampButton.TabIndex = 1;
+            this.CancelStampButton.Text = "Отменить";
+            this.CancelStampButton.UseVisualStyleBackColor = false;
             // 
             // tBox11
             // 
@@ -351,8 +351,8 @@ namespace KPSP_Stamp
             this.Controls.Add(this.tBox31);
             this.Controls.Add(this.tBox21);
             this.Controls.Add(this.tBox11);
-            this.Controls.Add(this.CancelButton);
-            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.CancelStampButton);
+            this.Controls.Add(this.SaveStampButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "StampForm";
             this.Text = "Заполнить штамп КПСП";
@@ -363,8 +363,8 @@ namespace KPSP_Stamp
 
         #endregion
 
-        private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button SaveStampButton;
+        private System.Windows.Forms.Button CancelStampButton;
         private System.Windows.Forms.TextBox tBox11;
         private System.Windows.Forms.TextBox tBox12;
         private System.Windows.Forms.TextBox tBox13;

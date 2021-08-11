@@ -72,6 +72,7 @@ namespace KPSP_Stamp
             this.SaveStampButton.TabIndex = 0;
             this.SaveStampButton.Text = "Внести изменения";
             this.SaveStampButton.UseVisualStyleBackColor = false;
+            this.SaveStampButton.Click += new System.EventHandler(this.SaveStampButton_Click);
             // 
             // CancelStampButton
             // 
@@ -84,6 +85,7 @@ namespace KPSP_Stamp
             this.CancelStampButton.TabIndex = 1;
             this.CancelStampButton.Text = "Отменить";
             this.CancelStampButton.UseVisualStyleBackColor = false;
+            this.CancelStampButton.Click += new System.EventHandler(this.CancelStampButton_Click);
             // 
             // tBox11
             // 

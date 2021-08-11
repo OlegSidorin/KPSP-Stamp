@@ -16,5 +16,15 @@ namespace KPSP_Stamp
         {
             InitializeComponent();
         }
+
+        private void CancelStampButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void SaveStampButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

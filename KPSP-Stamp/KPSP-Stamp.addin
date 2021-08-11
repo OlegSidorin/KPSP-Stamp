@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Заполнение штампа КПСП</Name>
+		<Assembly>C:\Users\Sidorin_O\source\repos\KPSP-Stamp\KPSP-Stamp\bin\Debug\KPSP-Stamp.dll</Assembly>
+		<AddInId>6AF0F74C-C9EE-4F8A-9CC5-88B53F5A5D33</AddInId>
+		<FullClassName>KPSP_Stamp.Main</FullClassName>
+		<VendorId>КПСП</VendorId>
+		<VendorDescription>Такая фирма, что еще сказать..</VendorDescription>
+	</AddIn>
+</RevitAddIns>

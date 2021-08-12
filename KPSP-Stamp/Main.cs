@@ -16,7 +16,7 @@ namespace KPSP_Stamp
     public class Main : IExternalApplication
     {
         public static string TabName { get; set; } = "Надстройки";
-        public static string PanelStampName { get; set; } = "Штамп";
+        public static string PanelStampName { get; set; } = "КПСП";
 
         public Result OnStartup(UIControlledApplication application)
         {

@@ -24,7 +24,7 @@ namespace KPSP_Stamp
             }
             foreach (var ast in allAST)
             {
-                if (ast.Name.Contains(familia))
+                if ((ast.Name.Contains(familia)) && !(familia.Count() == 0))
                     eId = ast.Id;
             }
             return eId;

@@ -90,40 +90,20 @@ namespace KPSP_Stamp
             UIDocument uidoc = app.ActiveUIDocument;
             Document doc = uidoc.Document;
             var vsSet = new FilteredElementCollector(doc).OfClass(typeof(ViewSheet)).ToElements().Cast<ViewSheet>().ToList();
+            var allTitleBlocks = new FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_TitleBlocks).ToElements().ToList();
+            var allTitleBlocksInView = new FilteredElementCollector(doc, doc.ActiveView.Id).OfCategory(BuiltInCategory.OST_TitleBlocks).ToElements().ToList();
             var avs = doc.ActiveView as ViewSheet;
             if (!allSheets)
             {
                 vsSet.Clear();
                 vsSet.Add(avs);
+                allTitleBlocks = allTitleBlocksInView;
             }
 
             ElementId eId = new ElementId(3078372);
             Methods m = new Methods();
 
-            var allTitleBlocksInView = new FilteredElementCollector(doc, doc.ActiveView.Id).OfCategory(BuiltInCategory.OST_TitleBlocks).ToElements().ToList();
-            foreach (var tb in allTitleBlocksInView)
-            {
-                ParameterSet ps = tb.Parameters;
-                foreach (Parameter p in ps)
-                {
-                    if (p.Definition.Name.ToLower() == "мск_штамп строка 1 подпись")
-                    {
-                        using (Transaction tr = new Transaction(doc, "010"))
-                        {
-                            tr.Start();
-                            try
-                            {
-                                bool bb = p.Set(m.getElementId(doc, fam1));    //("КПСП_Подписи: Проценко Роман Геннадьевич");
-                            }
-                            catch (Exception e)
-                            {
-                                TaskDialog.Show("1", e.ToString());
-                            }
-                            tr.Commit();
-                        }
-                    }
-                }
-            }
+            
             
             foreach (var vs in vsSet)
             {
@@ -348,6 +328,126 @@ namespace KPSP_Stamp
                                 tr.Start();
                                 p.Set(dat6);
                                 tr.Commit();
+                            }
+                        }
+                    }
+                    #endregion
+                    #region Подписи
+                    foreach (var tb in allTitleBlocks)
+                    {
+                        ParameterSet pTBs = tb.Parameters;
+                        foreach (Parameter ptb in pTBs)
+                        {
+                            if (ptb.Definition.Name.ToLower() == "мск_штамп строка 1 подпись")
+                            {
+                                using (Transaction tr = new Transaction(doc, "031"))
+                                {
+                                    tr.Start();
+                                    try
+                                    {
+                                        bool bb = ptb.Set(m.getElementId(doc, fam1));
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        TaskDialog.Show("1", e.ToString());
+                                    }
+                                    tr.Commit();
+                                }
+                            }
+                        }
+                        foreach (Parameter ptb in pTBs)
+                        {
+                            if (ptb.Definition.Name.ToLower() == "мск_штамп строка 2 подпись")
+                            {
+                                using (Transaction tr = new Transaction(doc, "032"))
+                                {
+                                    tr.Start();
+                                    try
+                                    {
+                                        bool bb = ptb.Set(m.getElementId(doc, fam2));
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        TaskDialog.Show("1", e.ToString());
+                                    }
+                                    tr.Commit();
+                                }
+                            }
+                        }
+                        foreach (Parameter ptb in pTBs)
+                        {
+                            if (ptb.Definition.Name.ToLower() == "мск_штамп строка 3 подпись")
+                            {
+                                using (Transaction tr = new Transaction(doc, "033"))
+                                {
+                                    tr.Start();
+                                    try
+                                    {
+                                        bool bb = ptb.Set(m.getElementId(doc, fam3));
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        TaskDialog.Show("1", e.ToString());
+                                    }
+                                    tr.Commit();
+                                }
+                            }
+                        }
+                        foreach (Parameter ptb in pTBs)
+                        {
+                            if (ptb.Definition.Name.ToLower() == "мск_штамп строка 4 подпись")
+                            {
+                                using (Transaction tr = new Transaction(doc, "034"))
+                                {
+                                    tr.Start();
+                                    try
+                                    {
+                                        bool bb = ptb.Set(m.getElementId(doc, fam4));
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        TaskDialog.Show("1", e.ToString());
+                                    }
+                                    tr.Commit();
+                                }
+                            }
+                        }
+                        foreach (Parameter ptb in pTBs)
+                        {
+                            if (ptb.Definition.Name.ToLower() == "мск_штамп строка 5 подпись")
+                            {
+                                using (Transaction tr = new Transaction(doc, "035"))
+                                {
+                                    tr.Start();
+                                    try
+                                    {
+                                        bool bb = ptb.Set(m.getElementId(doc, fam5));
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        TaskDialog.Show("1", e.ToString());
+                                    }
+                                    tr.Commit();
+                                }
+                            }
+                        }
+                        foreach (Parameter ptb in pTBs)
+                        {
+                            if (ptb.Definition.Name.ToLower() == "мск_штамп строка 6 подпись")
+                            {
+                                using (Transaction tr = new Transaction(doc, "036"))
+                                {
+                                    tr.Start();
+                                    try
+                                    {
+                                        bool bb = ptb.Set(m.getElementId(doc, fam6));
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        TaskDialog.Show("1", e.ToString());
+                                    }
+                                    tr.Commit();
+                                }
                             }
                         }
                     }

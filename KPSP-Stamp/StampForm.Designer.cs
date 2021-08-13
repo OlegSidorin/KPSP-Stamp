@@ -61,7 +61,6 @@ namespace KPSP_Stamp
             this.tBox46 = new System.Windows.Forms.TextBox();
             this.cBox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SaveStampButton
@@ -394,15 +393,15 @@ namespace KPSP_Stamp
             // 
             this.cBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cBox.AutoSize = true;
+            this.cBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cBox.Location = new System.Drawing.Point(334, 247);
+            this.cBox.Location = new System.Drawing.Point(334, 249);
             this.cBox.Margin = new System.Windows.Forms.Padding(2);
             this.cBox.Name = "cBox";
-            this.cBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cBox.Size = new System.Drawing.Size(139, 21);
             this.cBox.TabIndex = 4;
             this.cBox.Text = "На всех листах";
-            this.cBox.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.cBox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cBox.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -410,26 +409,13 @@ namespace KPSP_Stamp
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(225, 249);
+            this.label5.Location = new System.Drawing.Point(224, 246);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 16);
+            this.label5.Size = new System.Drawing.Size(91, 16);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Иванов С.П.";
+            this.label5.Text = "*Иванов С.П.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(161, 249);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 16);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "пример:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // StampForm
             // 
@@ -437,7 +423,6 @@ namespace KPSP_Stamp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(484, 331);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cBox);
             this.Controls.Add(this.label4);
@@ -515,6 +500,5 @@ namespace KPSP_Stamp
         public System.Windows.Forms.TextBox tBox46;
         public System.Windows.Forms.CheckBox cBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
     }
 }

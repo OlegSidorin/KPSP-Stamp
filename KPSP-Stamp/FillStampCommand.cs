@@ -23,7 +23,7 @@ namespace KPSP_Stamp
             ParameterSet ps = vs.Parameters;
             foreach (Parameter p in ps)
             {
-                // Должность -------------------------------------- 
+                #region Должность
                 if (p.Definition.Name.ToLower() == "мск_штамп строка 1 должность")
                 {
                     if (p.StorageType == StorageType.String)
@@ -66,7 +66,8 @@ namespace KPSP_Stamp
                         myForm.tBox16.Text = p.AsString();
                     }
                 }
-                // Фамилии -------------------------------------- 
+                #endregion
+                #region Фамилии
                 if (p.Definition.Name.ToLower() == "мск_штамп строка 1 фамилия")
                 {
                     if (p.StorageType == StorageType.String)
@@ -109,7 +110,51 @@ namespace KPSP_Stamp
                         myForm.tBox26.Text = p.AsString();
                     }
                 }
-
+                #endregion
+                #region Даты
+                if (p.Definition.Name.ToLower() == "мск_штамп дата 1")
+                {
+                    if (p.StorageType == StorageType.String)
+                    {
+                        myForm.tBox41.Text = p.AsString();
+                    }
+                }
+                if (p.Definition.Name.ToLower() == "мск_штамп дата 2")
+                {
+                    if (p.StorageType == StorageType.String)
+                    {
+                        myForm.tBox42.Text = p.AsString();
+                    }
+                }
+                if (p.Definition.Name.ToLower() == "мск_штамп дата 3")
+                {
+                    if (p.StorageType == StorageType.String)
+                    {
+                        myForm.tBox43.Text = p.AsString();
+                    }
+                }
+                if (p.Definition.Name.ToLower() == "мск_штамп дата 4")
+                {
+                    if (p.StorageType == StorageType.String)
+                    {
+                        myForm.tBox44.Text = p.AsString();
+                    }
+                }
+                if (p.Definition.Name.ToLower() == "мск_штамп дата 5")
+                {
+                    if (p.StorageType == StorageType.String)
+                    {
+                        myForm.tBox45.Text = p.AsString();
+                    }
+                }
+                if (p.Definition.Name.ToLower() == "мск_штамп дата 6")
+                {
+                    if (p.StorageType == StorageType.String)
+                    {
+                        myForm.tBox46.Text = p.AsString();
+                    }
+                }
+                #endregion
             }
             myForm.Show();
             //myForm.tBox11.Text = str;

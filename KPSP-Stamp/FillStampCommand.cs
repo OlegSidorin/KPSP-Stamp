@@ -18,145 +18,154 @@ namespace KPSP_Stamp
             UIDocument uidoc = commandData.Application.ActiveUIDocument;
             Document doc = uidoc.Document;
             string str = "";
-            StampForm myForm = new StampForm();
-            var vs = doc.ActiveView as ViewSheet;
-            ParameterSet ps = vs.Parameters;
-            foreach (Parameter p in ps)
+            try
             {
-                #region Должность
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 1 должность")
+                StampForm myForm = new StampForm();
+                var vs = doc.ActiveView as ViewSheet;
+                ParameterSet ps = vs.Parameters;
+                foreach (Parameter p in ps)
                 {
-                    if (p.StorageType == StorageType.String)
+                    #region Должность
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 1 должность")
                     {
-                        myForm.tBox11.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox11.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 2 должность")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 2 должность")
                     {
-                        myForm.tBox12.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox12.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 3 должность")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 3 должность")
                     {
-                        myForm.tBox13.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox13.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 4 должность")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 4 должность")
                     {
-                        myForm.tBox14.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox14.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 5 должность")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 5 должность")
                     {
-                        myForm.tBox15.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox15.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 6 должность")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 6 должность")
                     {
-                        myForm.tBox16.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox16.Text = p.AsString();
+                        }
                     }
-                }
-                #endregion
-                #region Фамилии
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 1 фамилия")
-                {
-                    if (p.StorageType == StorageType.String)
+                    #endregion
+                    #region Фамилии
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 1 фамилия")
                     {
-                        myForm.tBox21.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox21.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 2 фамилия")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 2 фамилия")
                     {
-                        myForm.tBox22.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox22.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 3 фамилия")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 3 фамилия")
                     {
-                        myForm.tBox23.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox23.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 4 фамилия")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 4 фамилия")
                     {
-                        myForm.tBox24.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox24.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 5 фамилия")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 5 фамилия")
                     {
-                        myForm.tBox25.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox25.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп строка 6 фамилия")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп строка 6 фамилия")
                     {
-                        myForm.tBox26.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox26.Text = p.AsString();
+                        }
                     }
-                }
-                #endregion
-                #region Даты
-                if (p.Definition.Name.ToLower() == "мск_штамп дата 1")
-                {
-                    if (p.StorageType == StorageType.String)
+                    #endregion
+                    #region Даты
+                    if (p.Definition.Name.ToLower() == "мск_штамп дата 1")
                     {
-                        myForm.tBox41.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox41.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп дата 2")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп дата 2")
                     {
-                        myForm.tBox42.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox42.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп дата 3")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп дата 3")
                     {
-                        myForm.tBox43.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox43.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп дата 4")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп дата 4")
                     {
-                        myForm.tBox44.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox44.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп дата 5")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп дата 5")
                     {
-                        myForm.tBox45.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox45.Text = p.AsString();
+                        }
                     }
-                }
-                if (p.Definition.Name.ToLower() == "мск_штамп дата 6")
-                {
-                    if (p.StorageType == StorageType.String)
+                    if (p.Definition.Name.ToLower() == "мск_штамп дата 6")
                     {
-                        myForm.tBox46.Text = p.AsString();
+                        if (p.StorageType == StorageType.String)
+                        {
+                            myForm.tBox46.Text = p.AsString();
+                        }
                     }
+                    #endregion
                 }
-                #endregion
+                myForm.Show();
             }
-            myForm.Show();
+            catch (Exception e)
+            {
+                TaskDialog.Show("!", "Это не Лист, тут нечего делать...\n");
+            }
+            
+            
             //myForm.tBox11.Text = str;
             //myForm.tBox21.Text = "Фамилие";
             //myForm.tBox31.Text = "Подпись";
